@@ -68,6 +68,13 @@ total_reports = nrow(data)
 total_reports
 
 # write code below!
+
+# get rows who don't have "at_scene_time_ts", "event_clearance_ts"
+
+naReports <- sum(is.na(data$at_scene_time_ts)) # sum counts all the TRUE's
+
+naReports/total_reports # ~72% of rows don't include this data
+
 ```
 
 
